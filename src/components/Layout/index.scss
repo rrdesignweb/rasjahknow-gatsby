@@ -1,0 +1,89 @@
+@import "../../styles/global.scss";
+@import "../../styles/mixins.scss";
+
+.Layout {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    background-size: 120%;
+    @include z-index(bgImage);
+    position: relative;
+    background-position: 75% 25%;
+    transition: all 1.5s ease-in-out;
+    @include respond-to("small") {
+        background-position: 25% 0%;
+        background-size: 350%;
+    }
+    &::before {
+        content: "";
+        @include z-index(bgOverlay);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(10, 10, 10, 0.4) 20%,
+            rgba(10, 10, 10, 0.55) 60%,
+            rgba(10, 10, 10, 0.8) 80%
+        );
+    }
+    .menu-icon {
+        @include z-index(menuItem);
+        position:relative;
+        a {
+            display:flex;
+            img.menu {
+                position: fixed;
+                left: 25px;
+                top: 25px;
+                cursor: pointer;
+                width: 25px;
+                height: 25px;
+            }
+            &:hover {
+                opacity: 0.5;
+            }
+            .menu-label {
+                transform:rotate(-90deg);
+                position: absolute;
+                top: 80px;
+                left: 8px;
+                font-size: 22px;
+                color: #fff;
+                cursor: pointer;
+                &:before {
+                    content: "";
+                }
+            }
+        }
+    }
+    .Social {
+        .social-wrapper {
+            position: absolute;
+            @include z-index(social);
+            top: 20px;
+            right: 25px;
+            ul {
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                li {
+                    margin-right:25px;  
+                    &:last-child {
+                        margin-right:0;
+                    }
+                    a {
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
