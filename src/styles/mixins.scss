@@ -27,6 +27,8 @@ $breakpoints: (
 
 $z-index: (
     navigationOverlay: 300,
+    shows: 200,
+    about: 200,
     logo: 200,
     menuItem: 100,
     social: 90,
@@ -48,4 +50,12 @@ $z-index: (
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@mixin pageHeader() {
+    font-family: $secondaryFont;
+    font-size: 34px;
+    color: darkred;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
 }

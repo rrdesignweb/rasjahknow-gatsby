@@ -1,0 +1,93 @@
+@import "../../styles/global.scss";
+@import "../../styles/mixins.scss";
+
+.Events {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0px auto;
+    margin-top: 80px;
+    @include respond-to("small") {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    margin-bottom: 70px;
+    max-width: 50em;
+    @include z-index(shows);
+    position: relative;
+    height: 78vh;
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    .event-header {
+        @include pageHeader();
+    }
+    .event-content {
+        width: 100%;
+        color: #fff;
+        overflow: scroll;
+        padding-bottom: 150px;
+        .event-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.75rem;
+            margin: 0.5rem 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            &:first-child {
+                margin-top: 0;
+            }
+            .event-details {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                @include respond-to("small") {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .event-name {
+                    color: #aaa;
+                    margin-right: 10px;
+                }
+                .event-datetime {
+                    margin-right: 10px;
+                }
+                .event-venue {
+                    color: #fff;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    @include respond-to("small") {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .city {
+                        margin-right: 10px;
+                    }
+                    .country {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .event-cta {
+                flex: 1;
+                text-align: right;
+                a {
+                    border: 1px solid #fff;
+                    padding: 1rem 2rem;
+                    color: #fff;
+                    text-decoration: none;
+                    transition: all 0.25s ease-in-out;
+                    outline: none;
+                    &:hover {
+                        color: #333;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

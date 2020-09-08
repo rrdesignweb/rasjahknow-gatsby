@@ -1,0 +1,37 @@
+@import "../../styles/global.scss";
+@import "../../styles/mixins.scss";
+
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0px auto;
+    margin-top: 80px;
+    margin-bottom: 70px;
+    max-width: 50em;
+    @include z-index(about);
+    position: relative;
+    height: 78vh;
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    @include respond-to("small") {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .about-header {
+        @include pageHeader();
+    }
+    .about-content {
+        color: #fff;
+        overflow: scroll;
+        padding-bottom: 150px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.75rem;
+        padding-bottom:100px;
+        margin: 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

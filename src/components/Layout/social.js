@@ -6,7 +6,7 @@ import data from "../../data/content"
 const Social = () => {
   const socialItems = data.social.map((item, i) => (
     <li key={i}>
-      <a href={item.href} title={item.title}>
+      <a href={item.href} target={item.target} title={item.title}>
         <img src={item.icon} alt={item.alt} />
       </a>
     </li>

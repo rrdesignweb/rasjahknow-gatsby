@@ -7,7 +7,7 @@ import "./index.scss"
 const Navigation = ({ open, setToggleNav }) => {
   const listItems = data.navigation.map((item, i) => (
     <li key={i}>
-      <a href={item.href} title={item.title}>
+      <a href={item.href} target={item.target} title={item.title}>
         {item.link}
       </a>
     </li>

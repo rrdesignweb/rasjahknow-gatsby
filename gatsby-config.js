@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`baskerville\:100`, `antic didone\:400`, ],
+        fonts: [`homemade apple\:400`, `antic didone\:400`],
       },
-    },
+    }
   ],
 }

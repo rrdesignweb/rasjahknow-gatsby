@@ -24,7 +24,7 @@ body {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-color:#000000;
+    background-color: #000000;
 }
 @keyframes fadeInAnimation {
     0% {
@@ -47,6 +47,7 @@ body {
         width: 240px;
     }
 }
+
 ul {
     @include unlist();
 }
