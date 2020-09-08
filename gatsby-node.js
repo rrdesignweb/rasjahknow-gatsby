@@ -38,8 +38,8 @@ exports.sourceNodes = (
   }
 
   const artist = "Ras Jahknow Band"
-  const timePeriod = "past"
-  const apiUrl = `https://rest.bandsintown.com/artists/${artist}/events?app_id=squarespace-todd-wright-gxya&date=${timePeriod}`
+  //const timePeriod = "past"
+  const apiUrl = `https://rest.bandsintown.com/artists/${artist}/events?app_id=squarespace-todd-wright-gxya&date=all`
 
 //   const blankObj = {
 //     id: "123456",

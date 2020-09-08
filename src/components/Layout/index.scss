@@ -77,10 +77,16 @@
     }
     .Bookings {
         position: absolute;
-        bottom: 70px;
-        right: 0px;
+        bottom: 80px;
+        right: -15px;
         @include z-index(menuItem);
         transform: rotate(90deg);
+       
+        @include respond-to("small") {
+            bottom: 25px;
+            right: 25px;
+            transform: rotate(0deg);
+        }
         a {
             text-decoration:none;
             .bookings-label {

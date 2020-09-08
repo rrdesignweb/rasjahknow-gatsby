@@ -16,9 +16,10 @@
     -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     @include respond-to("small") {
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 25px;
+        margin-right: 25px;
     }
+
     .about-header {
         @include pageHeader();
     }
